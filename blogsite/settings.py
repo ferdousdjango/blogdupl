@@ -33,8 +33,10 @@ INSTALLED_APPS = [
     'home',
     'django.contrib.humanize',
     'ckeditor',
-]
+    'ckeditor_uploader',
 
+]
+CKEDITOR_UPLOAD_PATH ='uploads/'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

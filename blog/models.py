@@ -2,6 +2,8 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils.timezone import now
 from ckeditor.fields import RichTextField
+from ckeditor_uploader.fields import RichTextUploadingField
+
 
 
 
@@ -9,7 +11,7 @@ class Post(models.Model):
     sno = models.AutoField(primary_key=True)
     title = models.CharField(max_length=155)
     views= models.IntegerField(default=0)
-    content = RichTextField(blank=True,null=True)
+    content = RichTextUploadingField(blank=True,null=True,)
     image=models.ImageField(upload_to='media',max_length=100,blank=True)
     author = models.CharField(max_length=150)
     slug = models.CharField(max_length=150)
