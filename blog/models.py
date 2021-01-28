@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils.timezone import now
+from ckeditor.fields import RichTextField
 
 
 
@@ -8,14 +9,12 @@ class Post(models.Model):
     sno = models.AutoField(primary_key=True)
     title = models.CharField(max_length=155)
     views= models.IntegerField(default=0)
-    content = models.TextField()
+    content = RichTextField(blank=True,null=True)
     image=models.ImageField(upload_to='media',max_length=100,blank=True)
     author = models.CharField(max_length=150)
     slug = models.CharField(max_length=150)
     timestamp=models.DateTimeField(blank=True)
-    hometitle=models.CharField(max_length=155,blank=True)
-    homeimage =models.ImageField(upload_to='media',max_length=100,blank=True)
-    homecontent = models.TextField(blank=True)
+    
     
 
     

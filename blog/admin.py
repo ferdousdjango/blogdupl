@@ -1,10 +1,7 @@
 from django.contrib import admin
 from blog.models import Post, BlogComment
 
-admin.site.register((BlogComment))
-@admin.register(Post)
+admin.site.register((Post,BlogComment))
 
 
-class PostAdmin(admin.ModelAdmin):
-    class Media:
-        js= ('tinyInject.js',)
+
