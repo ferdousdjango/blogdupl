@@ -5,6 +5,7 @@ from blog.models import Post
 
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
 #htmlpages
 def home(request):
     allposts=Post.objects.all()
@@ -98,7 +99,7 @@ def handlelogin(request):
             return redirect('home')
     return HttpResponse('404-notfound')
 
-    
+@login_required   
 def handlelogout(request):
     logout(request)
     messages.success(request,"logged out successfuly")

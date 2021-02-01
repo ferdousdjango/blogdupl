@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<!--[if lt IE 9 ]><html class="no-js oldie" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>EHJ & SJ Consultancy</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/cookie-banner-bottom.css">
+    
+    <style type="text/css" media="screen">
+        .s-styles {
+            background: white;
+            padding-top: 15rem;
+            padding-bottom: 12rem;
+        }
+        .s-styles-tab {
+            background: #081c2d;
+            padding-top: 15rem;
+            padding-bottom: 12rem;
+        }s
+     </style>
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+
+    <body id="top">
+
+    <script src="js/cookie-banner.js"></script>
+    <script src="js/index.js"></script>
+
+    <script>
+        CookieBanner.init({},
+        function(response){
+            var gaProperty = 'UA-171707196-1';
+
+            if (response.action === "accept") {
+                var obj = response.user_consent;
+                var Cookieresponse = null;
+                Cookieresponse = obj['modal-tab-performance'];
+
+                if(String(Cookieresponse) === "true" || String(Cookieresponse) === "undefined")
+                {
+                    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                    ga('create', gaProperty, 'auto');
+                    ga('send', 'pageview');
+                }
+                else if(String(Cookieresponse) === "false")
+                {
+                    var disableStr = 'ga-disable-' + gaProperty;
+                    if (document.cookie.indexOf(disableStr + '=true') > -1) {
+                    window[disableStr] = true;
+                    }
+
+                    // Opt-out function
+                    function gaOptout() {
+                    document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+                    window[disableStr] = true;
+                    } 
+                }
+            } else {
+                console.log("User Rejected.");
+
+                // Disable tracking if the opt-out cookie exists.
+                
+                var disableStr = 'ga-disable-' + gaProperty;
+                if (document.cookie.indexOf(disableStr + '=true') > -1) {
+                window[disableStr] = true;
+                }
+
+                // Opt-out function
+                function gaOptout() {
+                document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+                window[disableStr] = true;
+                } 
+            } 
+        });
+    </script>
+
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+
+        <p></p>
+        <div>
+            <a class="site-logo" href="index.html">
+                <img src="images/logo-white-2xsmall.png" alt="Homepage">
+            </a>
+        </div>
+
+        <nav class="header-nav">
+
+            <a href="#0" class="header-nav__close" title="close"><span>Close</span></a>
+
+            <div class="header-nav__content">
+                <h3>Navigation</h3>
+
+                <ul class="header-nav__list">
+                    <li class="current"><a class="smoothscroll"  href="#home" title="home">Home</a></li>
+                    <li><a class="smoothscroll"  href="#about" title="about">About</a></li>
+                    <li><a class="smoothscroll"  href="#services" title="services">Services</a></li>
+                    <li><a class="smoothscroll"  href="#works" title="works">Case Studies</a></li>
+                    <li><a class="smoothscroll"  href="#clients" title="clients">Clients</a></li>
+                    <li><a class="current"  href="blog.html" title="blog">Blog</a></li>
+                    <li><a class="smoothscroll"  href="#contact" title="contact">Contact</a></li>
+                    <li><a class="current"  href="privacy.html" title="Privacy">Privacy Policy</a></li>
+                </ul>
+
+                <p>Not sure if you found what you were looking for? Why not ping us an email or follow us on social media to contact us?</p>
+
+                <ul class="header-nav__social">
+                    <li>
+                        <a href="https://www.linkedin.com/company/ehj-sj-consultancy-ltd"><i class="fa fa-linkedin"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/ehj_sj"><i class="fa fa-twitter"></i></a>
+                    </li>
+                </ul>
+
+            </div> <!-- end header-nav__content -->
+
+        </nav>  <!-- end header-nav -->
+
+        <a class="header-menu-toggle" href="#0">
+            <span class="header-menu-text">Menu</span>
+            <span class="header-menu-icon"></span>
+        </a>
+
+    </header> <!-- end s-header -->
+
+
+    <!-- home
+    ================================================== -->
+    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="images/TopMainImage.jpeg" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+
+        <div class="overlay"></div>
+        <div class="shadow-overlay"></div>
+
+        <div class="home-content">
+
+            <div class="row home-content__main">
+
+                <h1>
+                  Demystifying your <br>
+                  Cyber Security <br>
+                  Issues. <br>
+                </h1>
+
+                <div class="home-content__buttons">
+                    <a href="#contact" class="smoothscroll Btn Btn--stroke">
+                        Contact Us
+                    </a>
+                    <a href="#about" class="smoothscroll Btn Btn--stroke">
+                        Who Are We?
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="home-content__scroll">
+                <a href="#about" class="scroll-link smoothscroll">
+                    <span>Scroll Down</span>
+                </a>
+            </div>
+
+            <div class="home-content__line"></div>
+
+        </div> <!-- end home-content -->
+
+
+        <ul class="home-social">
+            <li>
+                <a href="https://www.linkedin.com/company/ehj-sj-consultancy-ltd"><i class="fa fa-linkedin" aria-hidden="true"></i><span>LinkedIn</span></a>
+            </li>
+            <li>
+                <a href="https://twitter.com/ehj_sj"><i class="fa fa-twitter" aria-hidden="true"></i><span>Twitter</span></a>
+            </li>
+        </ul>
+        <!-- end home-social -->
+
+    </section> <!-- end s-home -->
+
+
+    <!-- about
+    ================================================== -->
+    <section id='about' class="s-about">
+
+        <div class="row section-header has-bottom-sep" data-aos="fade-up">
+            <div class="col-full">
+                <h1 class="display-1 display-1--light"><center>Tailored ad-hoc, project delivery and provider in supplying cyber security solutions.</center></h1>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row about-desc" data-aos="fade-up">
+            <div class="col-full">
+                <p>
+                  <p>At EHJ & SJ Consultancy Ltd we eat, sleep and breathe IT security!</p>
+
+                  <p>Our range of flexible, digital security solutions include security for IT migration programmes, reviews on new or existing infrastructure, cloud-based risk assessments, performing or co-ordinating security testing and management. We also provide services to implement and undertake security DevOps.</p>
+
+                  <p>We aim to demystify your cybersecurity issues by providing support, knowledge and practical hands-on assistance. We provide clients with a 360-degree security viewpoint and proactively encourage them to "shift to the left". This simple methodology ensures that robust security protocols are implemented from the start of any project, a critical step required to reduce risk and identify vulnerabilities.</p>
+
+                  <p>Our services are delivered by experienced industry consultants with over 30 years of combined expertise in delivering security services to support IT and Critical Infrastructure and IT/software development. our personal and inclusive approach allows us to integrate effectively with both onsite teams and 3rd party suppliers.</p>
+
+                  <p>State of the art project management tools support our inclusive project management process and allows us to respond contemporaneously to changes in scope whilst maintaining full visibility across any given project.</p>
+
+                  <h2 class="display-3 display-3--light">Simply put we love what we do!</h2>
+                </div>
+            </div>
+    </section> <!-- end s-about -->
+
+
+    <!-- services
+    ================================================== -->
+    <section id='services' class="s-services">
+
+        <div class="row section-header has-bottom-sep" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead">What We Do</h3>
+                <h1 class="display-2">We’ve got everything you need to secure your business or organisation</h1>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row services-list block-1-2 block-tab-full">
+
+            <div class="col-block service-item" data-aos="fade-up">
+                <div class="service-icon">
+                    <i class="icon-cloud"></i>
+                </div>
+                <div class="service-text">
+                    <h3 class="h2" style="color:#3fecac">Security Architecture Services</h3>
+                    <p style="color:#3fecac">We offer a complete security architecture as a service to Clients wishing to know whether a current design has
+                      implemented procedures in-line with best security practices, or to ascertain whether your current Infrastructure
+                      requires a further assessment from a security domain specialist. We provide support in ensuring security design patterns
+                      are utilised, perform threat modelling to determine security risks and assess whether the right controls are in placed
+                      within your IT Infrastructure whether Cloud or Data Center based.
+                    </p>
+                </div>
+            </div>
+            <div class="col-block service-item" data-aos="fade-up">
+                <div class="service-icon">
+                    <i class="icon-clock"></i>
+                </div>
+                <div class="service-text">
+                    <h3 class="h2" style="color:#3fecac">Security Test Management Services</h3>
+                    <p style="color:#3fecac">Security test management is a complete end to end management of various security test procedures ranging from scoping
+                      of penetration tests using our CREST certified penetration testers, undertake ad-hoc or continuous and automatic vulnerability
+                      scanning to meet your compliance needs or undertake piecewise ethical hacking sessions to test your web or API applications. Our
+                      approach is to assess your needs and provide guidance on what method may suit your requirements. We also ensure the process is
+                      managed by us delivering you with key information in terms of business risk.
+                    </p>
+                </div>
+            </div>
+            <div class="col-block service-item" data-aos="fade-up">
+                <div class="service-icon">
+                    <i class="icon-scales"></i>
+                </div>
+                <div class="service-text">
+                    <h3 class="h2" style="color:#3fecac">Audit, Risk & Compliance</h3>
+                    <p style="color:#3fecac">Pertaining an inventory or understanding what Assets an organisation possesses is often difficult, complex and hard to manage as
+                    part of a standard BAU lifecycle. EHJ & SJ Consultancy are an experienced consultancy that has worked with multiple organisations
+                    to determine the best way to assess and audit organisations to ISO 27001, CIS, Cloud Security Alliance, Cyber Essentials, ISA 62443 and PCI-DSS.
+                    We perform gap analysis reviews on Security governance procedures and work to ensure organisations adopt a governance, risk & compliance processes
+                    in the management of security risks.
+                    </p>
+                </div>
+            </div>
+            <div class="col-block service-item" data-aos="fade-up">
+                <div class="service-icon">
+                    <i class="icon-cube"></i>
+                </div>
+                <div class="service-text">
+                    <h3 class="h2" style="color:#3fecac">Security DevOps</h3>
+                    <p style="color:#3fecac">Building security into the Software Development Lifecycle (SDL) is pivotal to ensuring vulnerabilities are mitigated from day zero and
+                    that an application conforms to best security practices. We offer services to any business wishing for us to consult on how best to design
+                    your applications whether this is mobile or web-based technology. We also offer a practical implementation on performing SecDevOps using our
+                    preferred approach to implementing security during continuous CI/CD pipeline deployments.
+                    </p>
+                </div>
+            </div>
+
+        </div> <!-- end services-list -->
+
+    </section> <!-- end s-services -->
+
+
+    <!-- works
+    ================================================== -->
+    <section id='works' class="s-works">
+
+        <div class="intro-wrap">
+
+            <div class="row section-header has-bottom-sep light-sep" data-aos="fade-up">
+                <div class="col-full">
+                    <h3 class="subhead">Case Studies</h3>
+                    <h1 class="display-2 display-2--light">We love what we do, check out some of our latest works</h1>
+                </div>
+            </div> <!-- end section-header -->
+
+        </div> <!-- end intro-wrap -->
+
+        <div class="row works-content">
+            <div class="col-full masonry-wrap">
+                <div class="masonry">
+
+                    <div class="masonry__brick" data-aos="fade-up">
+                        <div class="item-folio">
+
+                            <div class="item-folio__thumb">
+                                <a href="images/portfolio/gallery/Travelex-Logo.png" class="thumb-link" title="Travelex Cloud Security" data-size="1544x440">
+                                    <img src="images/portfolio/gallery/Travelex-Logo.png"
+                                         srcset="images/portfolio/gallery/Travelex-Logo.png 1x, images/portfolio/gallery/travelexaws.png 2x" alt="">
+                                </a>
+                            </div>
+
+                            <div class="item-folio__text">
+                                <h3 class="item-folio__title">
+                                    Travelex Cloud Migration Programme
+                                </h3>
+                                <p class="item-folio__cat">
+                                    Cloud Security & Auditing
+                                </p>
+                            </div>
+
+                            <div class="item-folio__caption">
+                                <p>Working with Travelex Digital Transformation programme, EHJ & SJ Consultancy have been working with the Travelex teams to assess the current security posture of their cloud deployment, ensuring best practices are being adhered to based on a security risk assessing configurations and providing recommendations in the form of providing architecture solutions to ensure compliance with Financial regulations.</p>
+                                <p>Why not further read more about our case study on Cloud Security in our <a href="blog.html">Blogs page</p>
+                            </div>
+
+                        </div>
+                    </div> <!-- end masonry__brick -->
+
+                    <div class="masonry__brick" data-aos="fade-up">
+                        <div class="item-folio">
+
+                            <div class="item-folio__thumb">
+                                <a href="images/portfolio/gallery/ofgem.jpg" class="thumb-link" title="iDMobile OFGEM Regulatory Contract Data Projevt" data-size="1352×625">
+                                    <img src="iimages/portfolio/gallery/ofgem.png"
+                                         srcset="images/portfolio/gallery/ofgem.jpg 1x, images/portfolio/gallery/idmobile.png 2x" alt="">
+                                </a>
+                            </div>
+
+                            <div class="item-folio__text">
+                                <h3 class="item-folio__title">
+                                    Supporting iDMobile Build Security in Google Cloud for an OFGEM Regulated Project
+                                </h3>
+                                <p class="item-folio__cat">
+                                    Cloud Security & Compliance
+                                </p>
+                            </div>
+
+                            <div class="item-folio__caption">
+                                <p>Ensuring compliance with Dixon's CarphoneWarehouse Security Policies and deliverying a solution that would protect financial and personal information was a challenged iDMobile were required to achieve in a tight timescale for regulatory reasons. article. Our Team of Security Architects were on hand to review the approaches taken by iDMobile to ensure the design built security into edge protection
+                                ensuring sufficent logging and monitoring was in place and a centralised distributed Identiy and Access Management system was in place to manage internal access for Operations and Maintenance.</p>
+                                <p>Why not further read more about our case study on Cloud Security and achieving Compliance in our <a href="blog.html">Blogs page</p>
+                            </div>
+
+                        </div>
+                    </div> <!-- end masonry__brick -->
+
+                    <div class="masonry__brick" data-aos="fade-up">
+                        <div class="item-folio">
+
+                            <div class="item-folio__thumb">
+                                <a href="images/portfolio/gallery/OpenBankingProject.jpg" class="thumb-link" title="Santander PSD2" data-size="1500x900">
+                                    <img src="images/portfolio/gallery/OpenBankingProject.jpg"
+                                         srcset="images/portfolio/gallery/OpenBankingProject.jpg 1x, images/portfolio/gallery/open-banking-660x330.png 2x" alt="">
+                                </a>
+                            </div>
+
+                            <div class="item-folio__text">
+                                <h3 class="item-folio__title">
+                                    Santander PSD2: Open Banking
+                                </h3>
+                                <p class="item-folio__cat">
+                                    Application Security and SecDevOps
+                                </p>
+                            </div>
+
+                            <div class="item-folio__caption">
+                                <p>As part of the on-going Security process for Tesco Banking, EHJ & SJ Consultancy were drafted in to undertake a threat model exercise to determine the security posture for Tesco Banks legacy Infrastructure. This resulted in providing an End-to-End security risk assessment to allow Tesco Bank to focus on potential areas prone to cybersecurity attacks.</p>
+                                <p>Why not read more about our case study on adopting Web Security Practices in our <a href="blog.html">Blogs page</p>
+
+                            </div>
+
+                        </div>
+                    </div> <!-- end masonry__brick -->
+
+                    <div class="masonry__brick" data-aos="fade-up">
+                        <div class="item-folio">
+
+                            <div class="item-folio__thumb">
+                                <a href="images/portfolio/gallery/Tesco-Bank.jpeg" class="thumb-link" title="Tesco Banking and Clubcard" data-size="950x550">
+                                    <img src="images/portfolio/gallery/Tesco-Bank.jpeg"
+                                         srcset="images/portfolio/gallery/Tesco-Bank.jpeg 1x, images/portfolio/gallery/TescoBank.jpeg 2x" alt="">
+                                </a>
+                            </div>
+
+                            <div class="item-folio__text">
+                                <h3 class="item-folio__title">
+                                    Tesco Banking
+                                </h3>
+                                <p class="item-folio__cat">
+                                    Web Security
+                                </p>
+                            </div>
+
+                            <div class="item-folio__caption">
+                                <p>As part of the on-going Security process for Tesco Banking, EHJ & SJ Consultancy were drafted in to undertake a threat model exercise to determine the security posture for Tesco Banks legacy Infrastructure. This resulted in providing an End-to-End security risk assessment to allow Tesco Bank to focus on potential areas prone to cybersecurity attacks.</p>
+                                <p>Why not read more about our case study on adopting Web Security Practices in our <a href="blog.html">Blogs page</p>
+
+                            </div>
+
+                        </div>
+                    </div> <!-- end masonry__brick -->
+
+                    <div class="masonry__brick" data-aos="fade-up">
+                        <div class="item-folio">
+
+                            <div class="item-folio__thumb">
+                                <a href="images/portfolio/gallery/NR-TMS-Future.jpg" class="thumb-link" title="Grow Green" data-size="1440x400">
+                                    <img src="images/portfolio/gallery/NR-TMS-Future.jpg"
+                                         srcset="images/portfolio/gallery/NR-TMS-Future.jpg 1x, images/portfolio/gallery/NR-TMS.jpg 2x" alt="">
+                                </a>
+                            </div>
+
+                            <div class="item-folio__text">
+                                <h3 class="item-folio__title">
+                                    Network Rail: TMS Project
+                                </h3>
+                                <p class="item-folio__cat">
+                                    Infrastructure Security Auditing
+                                </p>
+                            </div>
+
+                            <div class="item-folio__caption">
+                                <p>Ensuring that Security is built into the Software Development Lifecylce and incorporated into the Developers mindset was a challenge we undertook to ensure the various teams at Santander.</p>
+                            </div>
+
+                        </div>
+                    </div> <!-- end masonry__brick -->
+
+                    <div class="masonry__brick" data-aos="fade-up">
+                        <div class="item-folio">
+
+                            <div class="item-folio__thumb">
+                                <a href="images/portfolio/gallery/SouthernITT.jpg" class="thumb-link" title="Guitarist" data-size="1200x700">
+                                    <img src="images/portfolio/gallery/SouthernITT.jpg"
+                                         srcset="images/portfolio/gallery/SouthernITT.jpg 1x, images/portfolio/gallery/SouthernITT.jpg 2x" alt="">
+                                </a>
+                            </div>
+
+                            <div class="item-folio__text">
+                                <h3 class="item-folio__title">
+                                    Southern TMS ITT Bid
+                                </h3>
+                                <p class="item-folio__cat">
+                                    Security Architecture Services
+                                </p>
+                            </div>
+
+                            <div class="item-folio__caption">
+                                <p>Working with Stanway Consulting, EHJ & SJ Consultancy were invited to support Southern in their ITT Bid for a new Traffic Management System control centre. EHJ & SJ Consultancy were requested to define non-functional requirements for the invited suppliers of the bid, which involved drafting a Cyber Security strategy.</p>
+                            </div>
+
+                        </div>
+                    </div> <!-- end masonry__brick -->
+
+                    <div class="masonry__brick" data-aos="fade-up">
+                        <div class="item-folio">
+
+                            <div class="item-folio__thumb">
+                                <a href="images/portfolio/gallery/LUL-Digtial.jpg" class="thumb-link" title="Palmeira" data-size="1050x700">
+                                    <img src="images/portfolio/gallery/LUL-Digtial.jpg"
+                                         srcset="images/portfolio/gallery/LUL-Digtial.jpg 1x, images/portfolio/gallery/LUL-Digtial.jpg 2x" alt="">
+                                </a>
+                            </div>
+
+                            <div class="item-folio__text">
+                                <h3 class="item-folio__title">
+                                    LUL Railway Control Systems
+                                </h3>
+                                <p class="item-folio__cat">
+                                    Security Architecture
+                                </p>
+                            </div>
+
+                            <div class="item-folio__caption">
+                                <p>Our previous involvement with London Underground Ltd was to create and implement a secure PLC system with system monitoring that was secure as part of the Train Describer upgrade programme on the SSL lines. We achieved this providing a fully-fledged TD system with real-time monitoring utilising some best practices taken from ISA 62443 to ensure overall compliance with LUL Security standards.</p>
+                            </div>
+
+                        </div>
+                    </div> <!-- end masonry__brick -->
+
+                </div> <!-- end masonry -->
+            </div> <!-- end col-full -->
+        </div> <!-- end works-content -->
+
+    </section> <!-- end s-works -->
+
+
+    <!-- clients
+    ================================================== -->
+    <section id="clients" class="s-clients">
+
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h2 class="subhead"><center>Our Clients</center></h2>
+                <h1 class="display-2"><center>EHJ & SJ Consultancy has been honoured to
+                work with these clients</center></h1>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row clients-outer" data-aos="fade-up">
+            <div class="col-full">
+                <div class="clients">
+
+                    <a href="#0" title="" class="clients__slide"><img src="images/clients/OpenBanking.png" /></a>
+                    <a href="#0" title="" class="clients__slide"><img src="images/clients/santander-trans.png" /></a>
+                    <a href="#0" title="" class="clients__slide"><img src="images/clients/ThalesLogo.png" /></a>
+                    <a href="#0" title="" class="clients__slide"><img src="images/clients/siemens.png" /></a>
+                    <a href="#0" title="" class="clients__slide"><img src="images/clients/Tesco_Logo.png" /></a>
+                    <a href="#0" title="" class="clients__slide"><img src="images/clients/Tesco-Bank.png" /></a>
+                    <a href="#0" title="" class="clients__slide"><img src="images/clients/tfl.png" /></a>
+                    <a href="#0" title="" class="clients__slide"><img src="images/clients/travelex.png" /></a>
+                    <a href="#0" title="" class="clients__slide"><img src="images/clients/networkrail.png" /></a>
+                    <a href="#0" title="" class="clients__slide"><img src="images/clients/DCG.png" /></a>
+
+                </div> <!-- end clients -->
+            </div> <!-- end col-full -->
+        </div> <!-- end clients-outer -->
+
+        <div class="row clients-testimonials" data-aos="fade-up">
+            <div class="col-full">
+                <div class="testimonials">
+
+                    <div class="testimonials__slide">
+
+                        <p>Delivering quality whilst under time constraints is always a pressure, but EHJ & SJ Consultancy managed
+                          to do this whilst proactively promoting security as an organisational wide responsibility. Happy with the relationship
+                          we have with EHJ & SJ Consultancy and would recommend them on their ability to apply Application Security and Security Architecture services.</p>
+
+                        <img src="images/avatars/santander.png" alt="Author image" class="testimonials__avatar">
+                        <div class="testimonials__info">
+                            <span class="testimonials__name">Eduardo Martinez Barrios</span>
+                            <span class="testimonials__pos">Santander Payments & Industry Oversight - Open Banking</span>
+                        </div>
+
+                    </div>
+
+                    <div class="testimonials__slide">
+
+                        <p>Ensuring security was taken seriously and implemented on a project that had no regard for cybersecurity was attributed to EHJ & SJ Consultancy's
+                          input on the TMS programme. We successfully managed to undertake a full security audit of our supplier's design to part ISO27001 and ISA 62443 and
+                          have the ability to assess the security risks posed to the overall safety profile.</p>
+
+                        <img src="images/avatars/networkrail.png" alt="Author image" class="testimonials__avatar">
+                        <div class="testimonials__info">
+                            <span class="testimonials__name">Network Rail TMS Programme</span>
+                            <span class="testimonials__pos">Network Rail</span>
+                        </div>
+
+                    </div>
+
+                    <div class="testimonials__slide">
+
+                        <p>EHJ & SJ Consultancy provided us with excellent input on how security can be built into a contract and what a security
+                          lifecycle looks like, something that has been missing for many years working on these types of Infrastructure projects.</p>
+
+                        <img src="images/avatars/stanway.png" alt="Author image" class="testimonials__avatar">
+                        <div class="testimonials__info">
+                            <span class="testimonials__name">Network Rail: Southern ITT Bid</span>
+                            <span class="testimonials__pos">Stanway Consulting</span>
+                        </div>
+
+                    </div>
+
+                </div><!-- end testimonials -->
+
+            </div> <!-- end col-full -->
+        </div> <!-- end client-testimonials -->
+
+    </section> <!-- end s-clients -->
+
+
+    <!-- contact
+    ================================================== -->
+    <section id="contact" class="s-contact">
+
+        <div class="overlay"></div>
+        <div class="contact__line"></div>
+
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead">Contact Us</h3>
+                <h1 class="display-2 display-2--light">Reach out for a new project or just say hello</h1>
+            </div>
+        </div>
+
+        <div class="row contact-content" data-aos="fade-up">
+
+            <div class="contact-primary">
+
+                <h7 class="h7">Send Us A Message</h7>
+                <p></p>
+                <p></p>
+
+                <form name="contactForm" id="contactForm" method="post" action="" novalidate="novalidate">
+                    <fieldset>
+
+                    <div class="form-field">
+                        <input name="contactName" type="text" id="contactName" placeholder="Your Name" value="" minlength="2" required="" aria-required="true" class="full-width">
+                    </div>
+                    <div class="form-field">
+                        <input name="contactEmail" type="email" id="contactEmail" placeholder="Your Email" value="" required="" aria-required="true" class="full-width">
+                    </div>
+                    <div class="form-field">
+                        <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="" required="" aria-required="true" class="full-width">
+                    </div>
+                    <div class="form-field">
+                        <textarea name="contactMessage" id="contactMessage" placeholder="Your Message" rows="10" cols="50" required="" aria-required="true" class="full-width"></textarea>
+                    </div>
+                    <div class="form-field">
+                        <button class="full-width btn--primary">Submit</button>
+                        <div class="submit-loader">
+                            <div class="text-loader">Sending...</div>
+                            <div class="s-loader">
+                                <div class="bounce1"></div>
+                                <div class="bounce2"></div>
+                                <div class="bounce3"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    </fieldset>
+                </form>
+
+                <!-- contact-warning -->
+                <div class="message-warning">
+                    Something went wrong. Please try again.
+                </div>
+
+                <!-- contact-success -->
+                <div class="message-success">
+                    Your message was sent, thank you!<br>
+                </div>
+
+            </div> <!-- end contact-primary -->
+
+            <div class="contact-secondary">
+                <div class="contact-info">
+
+                    <h7 class="h7 hide-on-fullwidth">Contact Info</h7>
+                    <p></p>
+
+                    <div class="cinfo">
+                        <h5>Where to Find Us</h5>
+                        <p>
+                            EHJ & SJ Consultancy, The Gatehouse House, Gatehouse Way, Aylesbury, HP19 8DB
+                        </p>
+                    </div>
+
+                    <div class="cinfo">
+                        <h5>Email Us At</h5>
+                        <p>
+                            contactus@ehjsjconsultancy.co.uk
+                        </p>
+                    </div>
+                    <!-- end contact-social -->
+                </div> <!-- end contact-info -->
+            </div> <!-- end contact-secondary -->
+
+        </div> <!-- end contact-content -->
+
+    </section> <!-- end s-contact -->
+
+
+    <!-- footer
+    ================================================== -->
+    <footer>
+
+      <div class="row footer-main">
+
+          <div class="col-six tab-full left footer-desc">
+              <div class="footer-logo"></div>
+              <p></p>
+              <h4 style="color:#828282;" <p>EHJ & SJ Consultancy are proud to be accredited by the IASME Consortium for achieving Cyber Essentials Registration No: IASME-CE-017466, demonstrating our commitment to not only providing security services but as an organisation we tackle our own security with the same approach as we do for our Clients.</p></h4>
+          </div>
+
+          <div class="col-six tab-full right footer-subscribe">
+              <div class="footer-logo-right"></div>
+              <p></p>
+              <h4 style="color:#828282;" <p>To ensure we meet the higest standards in our Industry sector, we are certified by IASME Registration No: IASME-SA-016593 to have obtained the self-verification of the IASME Governance Standard. This ensures we have an information security maangeemnt system in place including a GDPR management system in place.</p></h4>
+          </div>
+      </div>
+
+      <div class="row footer-main">
+          <div class="col-six tab-full left-b footer-desc">
+              <div class="footer-logo-left-bottom"></div>
+              <p></p>
+              <h4 style="color:#828282;" <p>We are proud to be part of the Crown Commercial Services and are a registered Supplier for the following frameworks, whereby Public Sector Customers can engage with us knowing we are certified by the Governments CCS Framework Standards to be an approved Crown Commercial Supplier.</p></h4>
+          </div>
+
+          <div class="col-six tab-full right-b footer-subscribe">
+              <div class="footer-logo-right-bottom"></div>
+              <p></p>
+              <h4 style="color:#828282;" <p>We are proud to be a member of the Cyber Exchange to ensure we actively engage and obtain the latest news and events within our Sector to stay abreadth of the current trends in Cyber Security and to extend our knowledge network.</p></h4>
+          </div>
+      </div>
+
+    </div> <!-- end footer-main -->
+
+    <div class="row footer-bottom">
+
+        <div class="col-twelve">
+            <div class="col-twelve">
+                
+                <div style="text-align: center;">
+                    <a class="Btn Btn--primary half-width" href="privacy.html">Privacy Policy</a>
+                </div>
+
+                <div class="go-top">
+                    <a class="smoothscroll" title="Back to Top" href="#top"><i class="icon-arrow-up" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+        </div> <!-- end footer-bottom -->
+
+    </footer> <!-- end footer -->
+
+
+    <!-- photoswipe background
+    ================================================== -->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title=
+                    "Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title=
+                    "Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title=
+                "Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div> <!-- end photoSwipe background -->
+
+
+    <!-- preloader
+    ================================================== -->
+
+    <div id="preloader">
+        <div id="loader">
+            <div class="line-scale-pulse-out">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
+ <!--navbar start-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">mr blogger</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item {% block homeactive %}
+        {% endblock homeactive %}">
+            <a class="nav-link " aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item {% block aboutactive %}
+        {% endblock aboutactive %}">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+          <li class="nav-item {% block contactactive %}
+        {% endblock contactactive %}">
+            <a class="nav-link" href="/contact">contact</a>
+          </li>
+          <li class="nav-item {% block blogactive %}
+        {% endblock blogactive %}">
+            <a class="nav-link" href="/blog">blog</a>
+          </li>
+
+
+        <!--search form-->
+        <form class="d-flex mx-3" method="get" action="/search">
+          <input class="form-control me-2" type="search" placeholder="Search" name="query" id="query"
+            aria-label="Search">
+          <button class="btn btn-outline-primary" type="submit">Search</button>
+        </form>
+        <!--search form ends
+        <a href="/admin" role='button' button class="btn btn-outline-primary m-2" target='_blank'>Admin Panel</a>
+
+        <!-- Button to trigger login modal -->
+        {% if user.is_authenticated %}
+        <div class="dropdown">
+          <a class="btn btn-info dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            welcome {{request.user}}
+          </a>
+
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li><a class="dropdown-item" href="logout">Logout</a></li>
+            
+          </ul>
+        </div>
+
+        {% else %}
+        <button type="button" class="btn btn-primary m-2" data-bs-toggle="modal" data-bs-target="#loginmodal">
+          Log in
+        </button>
+
+        <!-- Button to trigger signup modal -->
+        
+        {% endif %}
+      </div>
+    </div>
+  </nav>
+  
+  <!--end of navbar-->

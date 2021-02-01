@@ -1,35 +1,77 @@
 {% extends 'base.html' %}
 {% block title %} Blogpost{% endblock title %}
 {% block body %}
-<!--sharebutton script-->
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0"
-    nonce="5dC1cQek"></script>
-
-
-<!--sharebutton script-->
 {% load humanize %}
 <div class="container my-3">
+ <!--navbar start-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">mr blogger</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item
+        em">
+            <a class="nav-link " aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="/contact">contact</a>
+          </li>
+          <li class="nav-item
+        em">
+            <a class="nav-link" href="/blog">blog</a>
+          </li>
+
+
+          
+
+        </ul>
+        <!--search form-->
+        <form class="d-flex mx-3" method="get" action="/search">
+          <input class="form-control me-2" type="search" placeholder="Search" name="query" id="query"
+            aria-label="Search">
+          <button class="btn btn-outline-primary" type="submit">Search</button>
+        </form>
+        <!--search form ends
+        <a href="/admin" role='button' button class="btn btn-outline-primary m-2" target='_blank'>Admin Panel</a>
+
+        <!-- Button to trigger login modal -->
+        {% if user.is_authenticated %}
+        <div class="dropdown">
+          <a class="btn btn-info dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            welcome {{request.user}}
+          </a>
+
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li><a class="dropdown-item" href="logout">Logout</a></li>
+            
+          </ul>
+        </div>
+
+        {% else %}
+        <button type="button" class="btn btn-primary m-2" data-bs-toggle="modal" data-bs-target="#loginmodal">
+          Log in
+        </button>
+
+        <!-- Button to trigger signup modal -->
+        
+        {% endif %}
+      </div>
+    </div>
+  </nav>
+  <!--end of navbar-->
     <h2 class="blog-post-title"><a class="text-dark" href="/blog/{{post.slug}}">{{post.title}}</a></h2>
     <p class="blog-post-meta">{{post.timestamp}} by <a href="/about">{{post.author}}</a></p>
     <p>{{post.content|safe}}</p>
-    (<span> {{post.views}} views</span>)</p>
     <hr>
-    <!--share button fb-->
-    <div class="fb-share-button m-3" data-href="http://127.0.0.1:8000/blog/first-blog" data-layout="button_count"
-        data-size="large"><a target="_blank"
-            href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F127.0.0.1%3A8000%2Fblog%2Ffirst-blog&amp;src=sdkpreparse"
-            class="fb-xfbml-parse-ignore">Share</a></div>
-            
-        <div class="m-3">
-            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-show-count="true">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </div>
-         
-   
 </div>
-
- <!--share button fb ends-->
- 
 <!--<div class="container">
     <h2> Comments ({{comments.count}})</h2>
     <div class="my-2">

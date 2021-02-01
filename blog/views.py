@@ -2,14 +2,15 @@ from django.shortcuts import redirect,render
 from blog.models import Post,BlogComment
 from django.contrib import messages
 from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
 
-
+@login_required
 def bloghome(request):
     allposts= Post.objects.all()
     context = {'allposts':allposts}
     
     return render(request,'blog/bloghome.html',context)
-
+@login_required
 def blogpost(request,slug):
     post = Post.objects.filter(slug=slug).first()
     post.views= post.views +1
