@@ -1,0 +1,518 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+<!DOCTYPE html>
+<!--[if lt IE 9 ]><html class="no-js oldie" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>mr-blogger</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS {% static '' %}
+    ================================================== -->
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cookie-banner-bottom.css' %}">
+
+    <style type="text/css" media="screen">
+        .s-styles {
+            background: white;
+            padding-top: 15rem;
+            padding-bottom: 12rem;
+        }
+
+        .s-styles-tab {
+            background: #081c2d;
+            padding-top: 15rem;
+            padding-bottom: 12rem;
+        }
+
+        s
+    </style>
+    <!-- script 
+    ================================================== -->
+    <script src="{% static 'js/modernizr.js' %}"></script>
+    <script src="{% static 'js/pace.min.js' %}"></script>
+
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+
+<body id="top">
+
+    <script src="{% static 'js/cookie-banner.js' %}"></script>
+    <script src="{% static 'js/index.js' %}"></script>
+
+    <script>
+        CookieBanner.init({},
+            function (response) {
+                var gaProperty = 'UA-171707196-1';
+
+                if (response.action === "accept") {
+                    var obj = response.user_consent;
+                    var Cookieresponse = null;
+                    Cookieresponse = obj['modal-tab-performance'];
+
+                    if (String(Cookieresponse) === "true" || String(Cookieresponse) === "undefined") {
+                        (function (i, s, o, g, r, a, m) {
+                            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                                (i[r].q = i[r].q || []).push(arguments)
+                            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+                        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+                        ga('create', gaProperty, 'auto');
+                        ga('send', 'pageview');
+                    }
+                    else if (String(Cookieresponse) === "false") {
+                        var disableStr = 'ga-disable-' + gaProperty;
+                        if (document.cookie.indexOf(disableStr + '=true') > -1) {
+                            window[disableStr] = true;
+                        }
+
+                        // Opt-out function
+                        function gaOptout() {
+                            document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+                            window[disableStr] = true;
+                        }
+                    }
+                } else {
+                    console.log("User Rejected.");
+
+                    // Disable tracking if the opt-out cookie exists.
+
+                    var disableStr = 'ga-disable-' + gaProperty;
+                    if (document.cookie.indexOf(disableStr + '=true') > -1) {
+                        window[disableStr] = true;
+                    }
+
+                    // Opt-out function
+                    function gaOptout() {
+                        document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+                        window[disableStr] = true;
+                    }
+                }
+            });
+    </script>
+  
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+
+        <p></p>
+        <div>
+
+
+            <a class="site-logo" href="index.html">
+                <img src="{% static 'images/logo-white-2xsmall.png' %}" alt="Homepage">
+            </a>
+        </div>
+
+        <nav class="header-nav">
+
+            <a href="#0" class="header-nav__close" title="close"><span>Close</span></a>
+
+            <div class="header-nav__content">
+                <h3>Navigation</h3>
+
+                <!--search-->
+           
+         <!--signup modal-->
+
+  <div class="modal fade" id="signupmodal" tabindex="-1" aria-labelledby="signupmodal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="signupmodaltitle">Sign up here!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="/signup" method='post'>
+            {% csrf_token %}
+            <div class="mb-3">
+              <label for="username" class="form-label">Username</label>
+              <input type="text" class="form-control" id="username" name="username"
+                placeholder="choose a unique username" required>
+            </div>
+            <div class="mb-3">
+              <label for="fname" class="form-label">Firstname</label>
+              <input type="text" class="form-control" id="fname" name="fname" placeholder="firstname">
+            </div>
+            <div class="mb-3">
+              <label for="lname" class="form-label">Lastname</label>
+              <input type="text" class="form-control" id="lname" name="lname" placeholder="lastname" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+            </div>
+            <div class="mb-3">
+              <label for="pass1" class="form-label">Choose a Password</label>
+              <input type="password" class="form-control" id="pass1" name="pass1" placeholder="Choose your password"
+                required>
+            </div>
+            <div class="mb-3">
+              <label for="pass2" class="form-label">Confirm Password</label>
+              <input type="password" class="form-control" id="pass2" name="pass2"
+                placeholder="enter your password again" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--signup modal ends-->
+                <li class="current"><a class="current" href="{% url 'home' %}" title="home">Home</a></li>
+                <li><a class="current" href="{% url 'about' %}" title="about">About</a></li>
+
+
+                <li><a class="current" href="{% url 'bloghome' %}" title="blog">Blog</a></li>
+                <li><a class="current" href="{% url 'contact' %}" title="contact">Contact</a></li>
+                <li><a class="current" href="privacy.html" title="Privacy">Privacy Policy</a></li>
+
+                
+
+                <ul class="header-nav__social">
+                    <li>
+                        <a href="https://www.linkedin.com/company/ehj-sj-consultancy-ltd"><i
+                                class="fa fa-linkedin"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/ehj_sj"><i class="fa fa-twitter"></i></a>
+                    </li>
+                </ul>
+
+            </div> <!-- end header-nav__content -->
+
+        </nav> <!-- end header-nav -->
+
+        <a class="header-menu-toggle" href="#0">
+            <span class="header-menu-text">Menu</span>
+            <span class="header-menu-icon"></span>
+        </a>
+
+    </header> <!-- end s-header -->
+
+
+    <!-- home
+    ================================================== -->
+    <section id="home" class="s-home target-section" data-parallax="scroll"
+        data-image-src="{% static 'images/TopMainImage.jpeg' %}" data-natural-width=3000 data-natural-height=2000
+        data-position-y=center>
+
+        <div class="overlay"></div>
+        <div class="shadow-overlay"></div>
+
+        <div class="home-content">
+
+            <div class="row home-content__main">
+
+                <h1>
+                    Your account has been created <br>
+                    Successfully  <br>
+                    Log in to read our blogs <br>
+                </h1>
+
+                <div class="home-content__buttons">
+                    
+                    <button type="button" class="smoothscroll Btn Btn--stroke" data-bs-toggle="modal"
+                        data-bs-target="#loginmodal">
+                        Log in
+                    </button>
+                  
+
+
+                    
+
+
+                </div>
+
+            </div>
+
+            <div class="home-content__scroll">
+                <a href="#about" class="scroll-link smoothscroll">
+                    <span>Scroll Down</span>
+                </a>
+            </div>
+
+            <div class="home-content__line"></div>
+
+        </div> <!-- end home-content -->
+
+
+        <ul class="home-social">
+            <li>
+                <a href="https://www.linkedin.com/company/ehj-sj-consultancy-ltd"><i class="fa fa-linkedin"
+                        aria-hidden="true"></i><span>LinkedIn</span></a>
+            </li>
+            <li>
+                <a href="https://twitter.com/ehj_sj"><i class="fa fa-twitter"
+                        aria-hidden="true"></i><span>Twitter</span></a>
+            </li>
+        </ul>
+        <!-- end home-social -->
+
+    </section> <!-- end s-home -->
+
+
+    <!-- about
+    ================================================== -->
+     <!-- end s-about -->
+
+
+     <!-- end s-services -->
+
+
+
+
+
+    <!-- end s-clients -->
+
+
+    <!-- contact
+    ================================================== -->
+    <section id="contact" class="s-contact">
+
+        <div class="overlay"></div>
+        <div class="contact__line"></div>
+
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead">Contact Us</h3>
+                <h1 class="display-2 display-2--light">Reach out for a new project or just say hello</h1>
+            </div>
+        </div>
+
+        <div class="row contact-content" data-aos="fade-up">
+
+            <div class="contact-primary">
+
+                <h7 class="h7">Send Us A Message</h7>
+                <p></p>
+                <p></p>
+
+                <form name="contactForm" id="contactForm" method="post" action="" novalidate="novalidate">
+                    <fieldset>
+
+                        <div class="form-field">
+                            <input name="contactName" type="text" id="contactName" placeholder="Your Name" value=""
+                                minlength="2" required="" aria-required="true" class="full-width">
+                        </div>
+                        <div class="form-field">
+                            <input name="contactEmail" type="email" id="contactEmail" placeholder="Your Email" value=""
+                                required="" aria-required="true" class="full-width">
+                        </div>
+                        <div class="form-field">
+                            <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value=""
+                                required="" aria-required="true" class="full-width">
+                        </div>
+                        <div class="form-field">
+                            <textarea name="contactMessage" id="contactMessage" placeholder="Your Message" rows="10"
+                                cols="50" required="" aria-required="true" class="full-width"></textarea>
+                        </div>
+                        <div class="form-field">
+                            <button class="full-width btn--primary">Submit</button>
+                            <div class="submit-loader">
+                                <div class="text-loader">Sending...</div>
+                                <div class="s-loader">
+                                    <div class="bounce1"></div>
+                                    <div class="bounce2"></div>
+                                    <div class="bounce3"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </form>
+
+                <!-- contact-warning -->
+                <div class="message-warning">
+                    Something went wrong. Please try again.
+                </div>
+
+                <!-- contact-success -->
+                <div class="message-success">
+                    Your message was sent, thank you!<br>
+                </div>
+
+            </div> <!-- end contact-primary -->
+
+            <div class="contact-secondary">
+                <div class="contact-info">
+
+                    <h7 class="h7 hide-on-fullwidth">Contact Info</h7>
+                    <p></p>
+
+                    <div class="cinfo">
+                        <h5>Where to Find Us</h5>
+                        <p>
+                            EHJ & SJ Consultancy, The Gatehouse House, Gatehouse Way, Aylesbury, HP19 8DB
+                        </p>
+                    </div>
+
+                    <div class="cinfo">
+                        <h5>Email Us At</h5>
+                        <p>
+                            contactus@ehjsjconsultancy.co.uk
+                        </p>
+                    </div>
+                    <!-- end contact-social -->
+                </div> <!-- end contact-info -->
+            </div> <!-- end contact-secondary -->
+
+        </div> <!-- end contact-content -->
+
+    </section> <!-- end s-contact -->
+
+
+    <!-- footer
+    ================================================== -->
+    <!-- end footer-main -->
+
+    <div class="row footer-bottom">
+
+        <div class="col-twelve">
+            <div class="col-twelve">
+
+                <div style="text-align: center;">
+                    <a class="Btn Btn--primary half-width" href="privacy.html">Privacy Policy</a>
+                </div>
+
+                <div class="go-top">
+                    <a class="smoothscroll" title="Back to Top" href="#top"><i class="icon-arrow-up"
+                            aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+        </div> <!-- end footer-bottom -->
+
+        </footer> <!-- end footer -->
+
+
+        <!-- photoswipe background
+    ================================================== -->
+        <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+
+            <div class="pswp__bg"></div>
+            <div class="pswp__scroll-wrap">
+
+                <div class="pswp__container">
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                    <div class="pswp__item"></div>
+                </div>
+
+                <div class="pswp__ui pswp__ui--hidden">
+                    <div class="pswp__top-bar">
+                        <div class="pswp__counter"></div><button class="pswp__button pswp__button--close"
+                            title="Close (Esc)"></button> <button class="pswp__button pswp__button--share"
+                            title="Share"></button> <button class="pswp__button pswp__button--fs"
+                            title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom"
+                            title="Zoom in/out"></button>
+                        <div class="pswp__preloader">
+                            <div class="pswp__preloader__icn">
+                                <div class="pswp__preloader__cut">
+                                    <div class="pswp__preloader__donut"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                        <div class="pswp__share-tooltip"></div>
+                    </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+                    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+                    <div class="pswp__caption">
+                        <div class="pswp__caption__center"></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div> <!-- end photoSwipe background -->
+
+
+        <!-- preloader
+    ================================================== -->
+
+        <div id="preloader">
+            <div id="loader">
+                <div class="line-scale-pulse-out">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Java Script 
+    ================================================== -->
+        <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+        <script src="{% static 'js/plugins.js' %}"></script>
+        <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>
+
+{% endblock body %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+

@@ -9,5 +9,7 @@ urlpatterns = [
    path('signup',views.handlesignup, name='handlesignup'),
    path('login',views.handlelogin, name='handlelogin'),
    path('logout',views.handlelogout, name='handlelogout'),
+   path('aftersignup',views.aftersignup, name='aftersignup'),
+   path('loginreq',views.loginreq, name='loginreq'),
   
 ]

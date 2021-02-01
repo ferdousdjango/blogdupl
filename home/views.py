@@ -33,6 +33,10 @@ def contact(request):
 
 def about(request):
     return render(request,'home/about.html')
+def aftersignup(request):
+    return render(request,'home/aftersignup.html')
+def loginreq(request):
+    return render(request,'home/loginreq.html')
 
 def search(request):
     query = request.GET['query']
@@ -60,7 +64,7 @@ def handlesignup(request):
         #check for errors in input
         if len(username)> 10:
             messages.error(request,"username must be under 10 characters")
-            return redirect('home')
+            return redirect('aftersignup')
 
         if not username.isalnum():
             messages.error(request,"username should contain only letters and numbers!")
@@ -74,8 +78,8 @@ def handlesignup(request):
         myuser.first_name = fname
         myuser.last_name = lname
         myuser.save()
-        messages.success(request,"your account has been created successfuly!")
-        return redirect('home')
+        
+        return redirect('aftersignup')
         
 
 
@@ -92,8 +96,8 @@ def handlelogin(request):
 
         if user is not None:
             login(request,user)
-            messages.success(request,"logged in successfuly")
-            return redirect('home')
+            
+            return redirect('bloghome')
         else:
             messages.error(request,"invalid credentials,please try again")
             return redirect('home')
