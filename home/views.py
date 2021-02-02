@@ -63,15 +63,15 @@ def handlesignup(request):
 
         #check for errors in input
         if len(username)> 10:
-            messages.error(request,"username must be under 10 characters")
-            return redirect('aftersignup')
+            
+            return redirect('loginerror')
 
         if not username.isalnum():
-            messages.error(request,"username should contain only letters and numbers!")
-            return redirect('home')
+            
+            return redirect('loginerror')
         if pass1 != pass2 :
-            messages.error(request,"password does not match")
-            return redirect('home')
+            
+            return redirect('passerror')
 
 
         myuser = User.objects.create_user(username, email ,pass1)
@@ -99,8 +99,8 @@ def handlelogin(request):
             
             return redirect('bloghome')
         else:
-            messages.error(request,"invalid credentials,please try again")
-            return redirect('home')
+            
+            return redirect('loginerror')
     return HttpResponse('404-notfound')
 
 @login_required   
@@ -108,4 +108,9 @@ def handlelogout(request):
     logout(request)
     messages.success(request,"logged out successfuly")
     return redirect('home')
-    
+
+#error pages:
+def loginerror(request):
+    return render(request,'home/loginerror.html')
+def passerror(request):
+    return render(request,'home/passerror.html')

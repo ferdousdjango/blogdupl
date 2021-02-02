@@ -11,5 +11,7 @@ urlpatterns = [
    path('logout',views.handlelogout, name='handlelogout'),
    path('aftersignup',views.aftersignup, name='aftersignup'),
    path('loginreq',views.loginreq, name='loginreq'),
+   path('loginerror',views.loginerror, name='loginerror'),
+   path('passerror',views.passerror, name='passerror'),
   
 ]
