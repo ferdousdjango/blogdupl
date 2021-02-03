@@ -298,20 +298,9 @@
 
         <div class="row services-list block-1-2 block-tab-full">
 
-            <div class="col-block service-item" data-aos="fade-up">
-                <div class="service-icon">
-                    <i class="icon-cloud"></i>
-                </div>
-                <div class="service-text">
-                    <h3 class="h2" style="color:#3fecac">Security Architecture Services</h3>
-                    <p style="color:#3fecac">We offer a complete security architecture as a service to Clients wishing to know whether a current design has
-                      implemented procedures in-line with best security practices, or to ascertain whether your current Infrastructure
-                      requires a further assessment from a security domain specialist. We provide support in ensuring security design patterns
-                      are utilised, perform threat modelling to determine security risks and assess whether the right controls are in placed
-                      within your IT Infrastructure whether Cloud or Data Center based.
-                    </p>
-                </div>
-            </div>
+            
+                
+              
             <div class="col-block service-item" data-aos="fade-up">
                 <div class="service-icon">
                     <i class="icon-clock"></i>
@@ -320,7 +309,7 @@
                 {% for post in allposts %}
                     <h3 class="h2" style="color:#3fecac">{{post.title}}</h3>
                     
-                    <p style="color:#3fecac">{{post.content}}
+                    <p style="color:#3fecac">{{post.content|striptags|truncatechars:1000}}
                     </p>
                 </div>
             </div>
