@@ -43,7 +43,15 @@ class BlogComment(models.Model):
 
     
 
-    
+class HomePost(models.Model):
+    sno = models.AutoField(primary_key=True)
+    title = models.CharField(max_length=155)
+    views= models.IntegerField(default=0)
+    content = RichTextUploadingField(blank=True,null=True,)
+    image=models.ImageField(upload_to='media',max_length=100,blank=True)
+    author = models.CharField(max_length=150)
+    slug = models.CharField(max_length=150)
+    timestamp=models.DateTimeField(blank=True)  
     
     
 
