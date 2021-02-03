@@ -51,7 +51,7 @@ def HomePost(request):
     homeposts= HomePost.objects.all()
     context = {'homeposts':homeposts}
     
-    return render(request,'blog/bloghome.html',context)
+    return render(request,'home',context)
 def HomeDetail(request,slug):
     homepost = HomePost.objects.filter(slug=slug).first()
     homepost.views= homepost.views +1
