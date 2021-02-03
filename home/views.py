@@ -1,14 +1,13 @@
 from django.shortcuts import render,redirect,HttpResponse
 from .models import Contact
 from django.contrib import messages
-from blog.models import Post
-
+from blog.models import Post,HomePost
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 #htmlpages
 def home(request):
-    allposts=Post.objects.all()
+    allposts=HomePost.objects.all()
     context={'allposts':allposts}
     
     

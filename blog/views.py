@@ -51,7 +51,7 @@ def HomePost(request):
     homeposts= HomePost.objects.all()
     hcontext = {'homeposts':homeposts}
     
-    return render(request,'home.html',hcontext)
+    return render(request,'home/home.html',hcontext)
 def HomeDetail(request,slug):
     homepost = HomePost.objects.filter(slug=slug).first()
     homepost.views= homepost.views +1
