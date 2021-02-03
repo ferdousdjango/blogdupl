@@ -49,9 +49,9 @@ def postComment(request):
 
 def HomePost(request):
     homeposts= HomePost.objects.all()
-    context = {'homeposts':homeposts}
+    hcontext = {'homeposts':homeposts}
     
-    return render(request,'home',context)
+    return render(request,'home.html',hcontext)
 def HomeDetail(request,slug):
     homepost = HomePost.objects.filter(slug=slug).first()
     homepost.views= homepost.views +1
